@@ -1,0 +1,19 @@
+roles:
+  - name: Developer
+    permissions: ["code:push"]
+    inherits: []
+  - name: DevOps
+    permissions: ["deploy", "infra:deploy"]
+    inherits: []
+  - name: Database Admin
+    permissions: ["db:read", "db:write", "db:admin"]
+    inherits: []
+  - name: Cloud Admin
+    permissions: ["cloud:manage", "iam:modify"]
+    inherits: []
+
+users:
+  - name: Rahul
+    roles: ["Cloud Admin", "Database Admin"]
+  - name: Maya
+    roles: ["Developer", "DevOps"]
